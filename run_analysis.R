@@ -19,7 +19,6 @@ manipulateData <- function (filesDirName, subjectFile, activityFile, measurement
 
 # read the variables, get only those for the mean and the standard deviation
 # then make the variables more readable and valid column names using the CamelCase.
-
 colNames <- read.table("UCI HAR Dataset/features.txt", stringsAsFactors = F)
 searchedCols <- filter(colNames, grepl("mean()|std()", V2) & !grepl("meanFreq()|angle.", V2))
 searchedCols$V2 <- gsub("mean", "Mean", searchedCols$V2)
@@ -27,13 +26,11 @@ searchedCols$V2 <- gsub("std", "Std", searchedCols$V2)
 searchedCols$V2 <- gsub("[[:punct:]]", "", searchedCols$V2)
 
 # read the activity labels and make them more readable too.
-
 activityLabels <- read.table("UCI HAR Dataset/activity_labels.txt", stringsAsFactors = F)
 activityLabels$V2 <- sub("_", " ", activityLabels$V2)
 
 # read the measurement data for test and train, manipulate it and create the means
 # by each variable for each subject and each activity. Write the tidy data to a file.
-
 dataTest <- manipulateData("UCI HAR Dataset/test", "subject_test.txt", "y_test.txt", "X_test.txt", activityLabels, searchedCols)
 dataTrain <- manipulateData("UCI HAR Dataset/train", "subject_train.txt", "y_train.txt", "X_train.txt", activityLabels, searchedCols)
 dataFull <- rbind(dataTest, dataTrain)
