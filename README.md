@@ -18,7 +18,7 @@ The R script is called "run_analysis.R" and can be found in this repository. The
 
 #### R script algorithm
 * load the needed R packages (dplyr, plyr, reshape2)
-* define the function "manipulateData" which is used both for "train"" and "test"" data sets (see the Code book for more details on the structure of the raw data)
+* define the function "manipulateData" which is used both for "train" and "test" data sets (see the Code book for more details on the structure of the raw data)
     - arguments of "manipulateData":
         1. filesDirName - directory either to the test or to the train subdirectories
         2. subjectFile - the filename for the subjects
