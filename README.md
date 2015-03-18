@@ -19,24 +19,24 @@ The R script is called "run_analysis.R" and can be found in this repository. The
 #### R script algorithm
 * load the needed R packages (dplyr, plyr, reshape2)
 * define the function "manipulateData" which is used both for "train" and "test" data sets (see the Code book for more details on the structure of the raw data)
-- arguments of "manipulateData":
-1. filesDirName - directory either to the test or to the train subdirectories
-2. subjectFile - the filename for the subjects
-3. activityFile - the filename for the activities
-4. measurementsFile - the filename for the measurements
-5. activityLabels - the filename for the activity labels
-6. searchedCols - these are the needed columns for the mean and standard deviation measurements
-- "manipulateData" algorithm
-1. Read the subjects file, depending on the given directory and file parameters
-2. Read the activities file, depending on the given directory and file parameters
-3. Join the activities codes and their labels and select only the labels column
-4. Give readable names to both activities and subject columns
-5. Read the measurements data and select only the desired columns
-6. Set to those columns with measurements more readable names
-7. Bind the subjects, activities and the measurements together into one table
+  - arguments of "manipulateData":
+    1. filesDirName - directory either to the test or to the train subdirectories
+    2. subjectFile - the filename for the subjects
+    3. activityFile - the filename for the activities
+    4. measurementsFile - the filename for the measurements
+    5. activityLabels - the filename for the activity labels
+    6. searchedCols - these are the needed columns for the mean and standard deviation measurements
+  - "manipulateData" algorithm
+    1. Read the subjects file, depending on the given directory and file parameters
+    2. Read the activities file, depending on the given directory and file parameters
+    3. Join the activities codes and their labels and select only the labels column
+    4. Give readable names to both activities and subject columns
+    5. Read the measurements data and select only the desired columns
+    6. Set to those columns with measurements more readable names
+    7. Bind the subjects, activities and the measurements together into one table
 * Read the variable names and transform them into shorter, more readable column names, which correspond to many wide accepted coding standards
-- leave only the variable names which contain in their name "mean()" and "std()". I remove the columns which contain MeanFreq and "angle." as the first one is the mean frequency and the second is about the angle between two vectors, which I think are of no interest according to the project's instructions.
-- remove all the punctuation characters from the variable names and make all the abbreviated words begin with capital letters (in this case only the "mean" and "std" had to be corrected). Leave only the first letter to be small (*CamelCase*).
+  - leave only the variable names which contain in their name "mean()" and "std()". I remove the columns which contain MeanFreq and "angle." as the first one is the mean frequency and the second is about the angle between two vectors, which I think are of no interest according to the project's instructions.
+  - remove all the punctuation characters from the variable names and make all the abbreviated words begin with capital letters (in this case only the "mean" and "std" had to be corrected). Leave only the first letter to be small (*CamelCase*).
  	**Example:** tBodyAcc-mean()-X will become tBodyAccMeanX.
 
 * Read the activity labels and remove the "_" from their names

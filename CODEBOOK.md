@@ -55,8 +55,8 @@ The following files are available for the train and test data. Their description
 ### Details
     The first two columns as the names suggest are for the activity performed then the subject identifier who performed the activity (total of 30 subjects) and then the mean value for each of the variables. Only the variables which concern the mean and standard deviation were used.
 ### Units
-    - For variables concerning the measurements acquired by the accelerometer are standard gravity units 'g'.
-    - For variables concerning the measurements acquired by the gyroscope are radians/second.
+* For variables concerning the measurements acquired by the accelerometer are standard gravity units 'g'.
+* For variables concerning the measurements acquired by the gyroscope are radians/second.
  
 ## Detailed description of variables
 ### General description about the naming of the variables
