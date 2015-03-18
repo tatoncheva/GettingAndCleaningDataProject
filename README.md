@@ -1,6 +1,3 @@
----
-output: html_document
----
 Getting And Cleaning Data Course Project
 ----------------------------------------
 
@@ -13,7 +10,7 @@ This is the file which you are reading which explains how the different parts of
 
 ### Raw data file information
 A detailed information of the raw data can be found in the Code Book file. But what you will need in order to run the R script is its destination:
-    **https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip**
+    https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 The url points to a .zip file which contains several folders and many files which represent the raw data used in the project.
 
 ### R script for manipulating data
